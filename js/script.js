@@ -11,7 +11,7 @@ $(document).ready(function () {
 
 });
 
-const swiper = new Swiper('.home__swiper', {
+const home__swiper = new Swiper('.home__swiper', {
     loop: true,
 
     autoplay: {
@@ -26,3 +26,17 @@ const swiper = new Swiper('.home__swiper', {
         el: '.swiper-scrollbar',
     },
 });
+
+// const gallery__swiper = new Swiper('.gallery__swiper', {
+//     loop: true,
+//     slidesPerView: 3,
+//     grid: {
+//         rows: 2,
+//       },
+//     autoHeight: false,
+//     spaceBetween: 30,
+// });
+
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
