@@ -385,7 +385,7 @@ body.lock {
 .home__items {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
 }
 @media (max-width: 1080px) {
