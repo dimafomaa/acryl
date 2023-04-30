@@ -568,6 +568,11 @@ body.lock {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  .enterprise__item--text {
+    font-size: 16px;
+  }
+}
 
 .one,
 .three {
@@ -766,4 +771,207 @@ body.lock {
 }
 .gallery__item--text:hover {
   box-shadow: 0 0 15px #fff;
+}
+@media (max-width: 768px) {
+  .gallery__item--text {
+    display: none;
+  }
+}
+
+.order {
+  padding: 50px 0;
+  background: url("../img/background28.webp");
+  background-position: center;
+  text-align: center;
+}
+.order__row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+  padding-top: 50px;
+}
+@media (max-width: 1000px) {
+  .order__row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  .order__row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .order__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .order__row {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
+.order__column {
+  position: relative;
+  margin-bottom: 20px;
+}
+@media (max-width: 450px) {
+  .order__column {
+    padding-bottom: 10px;
+  }
+}
+.order__item {
+  text-align: center;
+}
+.order__item span {
+  position: absolute;
+  top: -80px;
+  right: -20px;
+  font-size: 120px;
+  opacity: 0.05;
+  font-weight: 700;
+  font-family: "Yanone Kaffeesatz";
+  z-index: 1;
+  border: 1px solid #1b1b1d;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order__image {
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
+.order__img {
+  width: 100px;
+}
+.order__text {
+  font-size: 18px;
+  line-height: 1.2;
+}
+.order__link {
+  padding: 20px 50px;
+  width: 400px;
+  font-size: 24px;
+  display: inline-block;
+  margin-top: 50px;
+}
+@media (max-width: 550px) {
+  .order__link {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+.contact {
+  padding: 50px 0;
+  background-color: rgba(44, 78, 70, 0.0901960784);
+  border-radius: 100px 100px 0 0;
+}
+@media (max-width: 768px) {
+  .contact {
+    padding-bottom: 20px;
+    border-radius: 20px 20px 0 0;
+  }
+}
+.contact__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .contact__inner {
+    justify-content: left;
+    gap: 0;
+  }
+}
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 350px;
+}
+.contact__item svg {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.contact__item:hover svg {
+  transform: rotate(5deg);
+}
+@media (max-width: 1050px) {
+  .contact__item {
+    margin-bottom: 20px;
+  }
+}
+.contact__link {
+  color: var(--clr2);
+  transition: all 0.3s ease-in-out;
+}
+.contact__link:hover {
+  transform: translateX(5px);
+}
+
+.footer {
+  padding: 10px 0;
+  border-top: 1px solid rgba(44, 78, 70, 0.1725490196);
+  text-align: center;
+  background-color: #cae2dc;
+}
+.footer__cooper {
+  font-size: 10px;
+  color: var(--clr2);
+}
+.footer__cooper a {
+  color: var(--clr2);
+  transition: all 0.3s ease-in-out;
+}
+.footer__cooper a:hover {
+  color: #fff;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 30px;
+  bottom: -30%;
+  font-size: 22px;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--clr4);
+  border-radius: 20px 20px 20px 0;
+  box-shadow: 0 0 25px rgba(11, 109, 63, 0.5);
+  animation: scroll 1.5s ease-in-out alternate infinite;
+}
+@media (max-width: 768px) {
+  .scroll-up {
+    right: 10px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.scroll-up:hover {
+  transform: translateY(-5px);
+}
+
+.show-scroll {
+  bottom: 30px;
 }
