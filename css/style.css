@@ -438,8 +438,13 @@ body.lock {
 }
 
 .advantages {
-  padding: 50px 0;
+  padding: 60px 0;
   background: rgba(44, 78, 70, 0.0901960784);
+}
+@media (max-width: 768px) {
+  .advantages {
+    padding: 50px 0;
+  }
 }
 .advantages__row {
   display: grid;
@@ -519,7 +524,7 @@ body.lock {
 .enterprise__item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 30px;
 }
 @media (max-width: 768px) {
@@ -529,7 +534,7 @@ body.lock {
   }
 }
 .enterprise__item--block {
-  flex: 0 1 45%;
+  flex: 0 1 50%;
   padding: 10px 50px;
   background: rgba(216, 216, 216, 0.2);
   display: flex;
@@ -576,6 +581,13 @@ body.lock {
     padding: 40px 20px;
   }
 }
+@media (max-width: 530px) {
+  .one,
+  .three {
+    padding: 40px 20px 20px;
+    border-radius: 0px 0px 20px 0;
+  }
+}
 
 .two,
 .four {
@@ -589,6 +601,13 @@ body.lock {
     padding: 40px 20px;
   }
 }
+@media (max-width: 530px) {
+  .two,
+  .four {
+    padding: 40px 20px 20px;
+    border-radius: 0px 0px 20px 0;
+  }
+}
 
 @media (max-width: 768px) {
   .enterprise__item--rev {
@@ -598,7 +617,7 @@ body.lock {
 
 .enterprise__image-one {
   min-height: 400px;
-  flex: 0 1 45%;
+  flex: 0 1 50%;
   background-image: url("../img/e1.jpg");
   background-size: cover;
   background-position: center;
@@ -613,12 +632,13 @@ body.lock {
 @media (max-width: 530px) {
   .enterprise__image-one {
     min-height: 220px;
+    border-radius: 20px 0 0 0px;
   }
 }
 
 .enterprise__image-two {
   min-height: 400px;
-  flex: 0 1 45%;
+  flex: 0 1 50%;
   background-image: url("../img/e2.jpg");
   background-size: cover;
   background-position: center;
@@ -634,12 +654,13 @@ body.lock {
 @media (max-width: 530px) {
   .enterprise__image-two {
     min-height: 220px;
+    border-radius: 20px 0 0 0px;
   }
 }
 
 .enterprise__image-three {
   min-height: 400px;
-  flex: 0 1 45%;
+  flex: 0 1 50%;
   background-image: url("../img/e3.jpg");
   background-size: cover;
   background-position: center;
@@ -654,12 +675,13 @@ body.lock {
 @media (max-width: 530px) {
   .enterprise__image-three {
     min-height: 220px;
+    border-radius: 20px 0 0 0px;
   }
 }
 
 .enterprise__image-four {
   min-height: 400px;
-  flex: 0 1 45%;
+  flex: 0 1 50%;
   background-image: url("../img/e4.jpg");
   background-size: cover;
   background-position: center;
@@ -676,5 +698,6 @@ body.lock {
   .enterprise__image-four {
     min-height: 220px;
     background-position: bottom;
+    border-radius: 20px 0 0 0px;
   }
 }
