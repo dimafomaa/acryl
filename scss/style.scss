@@ -1213,7 +1213,7 @@ body.lock {
     background-color: var(--clr4);
     border-radius: 20px 20px 20px 0;
     box-shadow: 0 0 25px rgba(11, 109, 63, 0.5);
-    animation: scroll 1.5s ease-in-out alternate infinite;
+    animation: scroll 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) alternate infinite;
     
     @media (max-width: 768px) {
         right: 10px;
