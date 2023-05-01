@@ -745,16 +745,18 @@ body.lock {
 .gallery__slide {
   position: relative;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 30px 0px 30px 0;
 }
 .gallery__slide:hover .gallery__img {
   opacity: 0.5;
+  transform: scale(1.05);
 }
 .gallery__slide:hover .gallery__item--text {
   opacity: 1;
 }
 .gallery__img {
   transition: all 0.3s ease-in-out;
-  border-radius: 30px 0px 30px 0;
   box-shadow: 2px 2px 8px rgba(27, 27, 29, 0.2196078431);
 }
 .gallery__item--text {
@@ -765,11 +767,9 @@ body.lock {
   opacity: 0;
   transition: all 0.3s ease-in-out;
   color: var(--clr2);
-  padding: 10px;
-  border: 1px solid var(--clr4);
+  padding: 5px 10px;
   border-radius: 20px 20px 20px 0;
-}
-.gallery__item--text:hover {
+  background-color: rgba(255, 255, 255, 0.5137254902);
   box-shadow: 0 0 15px #fff;
 }
 @media (max-width: 768px) {
@@ -864,6 +864,89 @@ body.lock {
     width: 100%;
     font-size: 20px;
   }
+}
+
+.work {
+  padding: 50px 0;
+  background: rgba(44, 78, 70, 0.0274509804);
+}
+.work__title {
+  margin-bottom: 80px;
+}
+.work__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 0 20px;
+}
+@media (max-width: 1000px) {
+  .work__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .work__inner {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+}
+.work__item {
+  position: relative;
+  margin: 0 auto;
+}
+.work__item::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 50%;
+  background: var(--clr5);
+  top: -20px;
+  left: -20px;
+  border-radius: 0 50px 0 50px;
+  z-index: -1;
+  opacity: 0.5;
+}
+.work__item::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 50%;
+  background: var(--clr5);
+  bottom: 10%;
+  right: -20px;
+  border-radius: 0 50px 0 50px;
+  z-index: -1;
+  opacity: 0.5;
+}
+.work__item span {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3b3b3b;
+  font-size: 20px;
+  box-shadow: 0 0 15px #9ea1a1;
+  font-weight: 500;
+  background-color: rgba(228, 248, 244, 0.631372549);
+  border-radius: 20px 0 20px 0;
+  padding: 3px 10px;
+}
+.work__image--block {
+  display: flex;
+  align-items: center;
+}
+.work__image {
+  margin-bottom: 20px;
+  max-width: 350px;
+}
+.work__img {
+  box-shadow: rgba(27, 27, 29, 0.1843137255) 0 0 5px;
+  border-radius: 50px 0px 50px 0;
+}
+.work__text {
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
 }
 
 .contact {
